@@ -3,13 +3,10 @@ from __future__ import annotations
 from exam_practice_agent import build_agent
 
 
-def main(output_path: str = "langgraph_structure.png", mermaid_path: str = "langgraph_structure.mmd"):
-    """
-    Entry point for the reorganized Exam Practice Agent.
-
-    The function constructs the LangGraph agent and can be extended to
-    accept CLI arguments or connect to an application server.
-    """
+def generate_structure(
+    output_path: str = "langgraph_structure.png", mermaid_path: str = "langgraph_structure.mmd"
+):
+    """Render the LangGraph structure for the Exam Practice Agent."""
 
     agent = build_agent()
     graph = agent.get_graph(xray=True)
@@ -40,4 +37,4 @@ def main(output_path: str = "langgraph_structure.png", mermaid_path: str = "lang
 
 
 if __name__ == "__main__":
-    main()
+    generate_structure()
